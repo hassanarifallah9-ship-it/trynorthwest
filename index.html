@@ -1,0 +1,2266 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	
+<title>NorthWest Construction Control</title>
+<meta name="description" lang="en-us" content="NorthWest Construction Control provides streamlined draw inspections and support services for construction lenders nationwide. Our on-site services allow banks and private lenders to accelerate disbursement operations, ensure compliance, and mitigate risk across their project portfolio." />
+	<link rel="canon_test" href="/trynorthwest/">
+
+	<meta name="viewport" content="height=device-height, width=device-width, initial-scale=1, minimum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta  name="format-detection" content="telephone=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="icon" type="image/png" href="/trynorthwest/images/sites/ncc/NWCC-favicon.png">
+
+	
+<script src="/trynorthwest/javascripts/jquery-1.11.0.min.js?1789483190" type="text/javascript"></script> 
+<script src="/trynorthwest/javascripts/jquery.simplemodal.1.4.4.min.js?1789483190" type="text/javascript"></script> 
+<script src="/trynorthwest/javascripts/jquery-ui-1.10.3.custom.min.js?1789483190" type="text/javascript"></script> 
+<script src="/trynorthwest/javascripts/lazyload+io-polyfill.min.js?1789483190" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+  /*  patch added 9/18/2018 by scott
+   *  fix issue of link editing when ckeditor is opened in lightbox mode
+   *  https://bizango.teamwork.com/#/tasks/11559149
+   */
+  $.widget( "ui.dialog", $.ui.dialog, {
+   /*! jQuery UI - v1.10.2 - 2013-12-12
+    *  http://bugs.jqueryui.com/ticket/9087#comment:27 - bugfix
+    *  http://bugs.jqueryui.com/ticket/4727#comment:23 - bugfix
+    *  allowInteraction fix to accommodate windowed editors
+    */
+    _allowInteraction: function( event ) {
+      if ( this._super( event ) ) {
+        return true;
+      }
+
+      // address interaction issues with general iframes with the dialog
+      if ( event.target.ownerDocument != this.document[ 0 ] ) {
+        return true;
+      }
+
+      // address interaction issues with dialog window
+      if ( $( event.target ).closest( ".cke_dialog" ).length ) {
+        return true;
+      }
+
+      // address interaction issues with iframe based drop downs in IE
+      if ( $( event.target ).closest( ".cke" ).length ) {
+        return true;
+      }
+    },
+   /*! jQuery UI - v1.10.2 - 2013-10-28
+    *  http://dev.ckeditor.com/ticket/10269 - bugfix
+    *  moveToTop fix to accommodate windowed editors
+    */
+    _moveToTop: function ( event, silent ) {
+      if ( !event || !this.options.modal ) {
+        this._super( event, silent );
+      }
+    }
+  });
+</script>
+    
+
+
+
+
+
+
+
+    
+
+
+
+
+
+  	<link rel="stylesheet" href="https://use.typekit.net/hej7fji.css">
+  	<script type=“text/javascript” src=“//fast.fonts.net/jsapi/1e2220d2-9514-48df-89b1-641bffaabc19.js”></script>
+	<link href="/trynorthwest/stylesheets/blocks/defaults.css?1789483192" media="screen" rel="stylesheet" type="text/css" />
+	<link href="/trynorthwest/stylesheets/ncc/defaults-foundation.css?1789483197" media="screen" rel="stylesheet" type="text/css" />
+	<link href="/trynorthwest/stylesheets/ncc/icons.css?1789483197" media="screen" rel="stylesheet" type="text/css" />
+	<link href="/trynorthwest/stylesheets/ncc/mobile-menu.css?1789483197" media="screen" rel="stylesheet" type="text/css" />
+	<link href="/trynorthwest/stylesheets/ncc/helpers.css?1789483197" media="screen" rel="stylesheet" type="text/css" />
+	<link href="/trynorthwest/stylesheets/ncc/site.css?v=header2" media="screen" rel="stylesheet" type="text/css" />
+</head>
+
+<body id="body_home" class=" body_home ">
+
+	 
+<div id="nav_frame">
+	<div class="page_frame group">
+		
+<div id="nav">
+	<a href="/trynorthwest/" id="nav_home"></a>
+	<ul class="nav">
+
+			<li class="li-subnav" data-nav="1752">
+
+			<a class="" id="nav_services" href="/trynorthwest/services" >Services</a>
+			</li>
+
+					<div class="subnav_frame" data-nav="1752">
+						<div class="subnav-container">
+								<div class="subnav-title">
+									<h3 class="bizango_cms bizango_cms_content bizango_content_data1 textdiv_data1" id="content_248608_data1" data-bizango='{"monkey":"data", "field":"data1", "object_type":"content", "cms_id":"248608", "label":"", "tag":"h3"}' >Your trusted one-stop trusted partner - any project, anywhere</h3 >
+	
+
+
+
+
+
+
+								</div>
+								
+								<div class="subnav-main">
+									<div class="col col-1">
+											<div class="bizango_cms bizango_cms_content bizango_content_teaser textdiv_teaser" id="content_248608_teaser" data-bizango='{"monkey":"data", "field":"teaser", "object_type":"content", "cms_id":"248608", "label":"" ,  "tag":"div"}' >	
+		<p><a href="/trynorthwest/services-project-monitoring" title="Trusted progress monitoring">Draw Inspections</a></p>
+
+<p><a href="/trynorthwest/services-risk-reviews" title="Mitigation project risk">Pre-Close&nbsp;Reviews</a></p>
+
+<p><a href="/trynorthwest/services-specialized-support" title="Convenient field services">Specialized&nbsp;Services</a></p>
+		
+	</div>
+	
+
+
+
+
+
+
+									</div>
+
+										<div class="col col-2 divider">
+												<div class="bizango_cms bizango_cms_content bizango_content_leadin textdiv_leadin" id="content_248608_leadin" data-bizango='{"monkey":"data", "field":"leadin", "object_type":"content", "cms_id":"248608", "label":"" ,  "tag":"div"}' >	
+		<p><a href="/trynorthwest/services-residential" title="Solutions for residential construction loans">Residential</a></p>
+
+<p><a href="/trynorthwest/services-commercial" title="Solutions for commercial construction loans">Commercial</a></p>
+		
+	</div>
+	
+
+
+
+
+
+
+										</div>
+
+								</div>
+						</div>
+					</div>
+
+
+
+			<li class="li-subnav" data-nav="1753">
+
+			<a class="" id="nav_solutions" href="/trynorthwest/solutions" >Solutions</a>
+			</li>
+
+					<div class="subnav_frame" data-nav="1753">
+						<div class="subnav-container">
+								<div class="subnav-title">
+									<h3 class="bizango_cms bizango_cms_content bizango_content_data1 textdiv_data1" id="content_248609_data1" data-bizango='{"monkey":"data", "field":"data1", "object_type":"content", "cms_id":"248609", "label":"", "tag":"h3"}' >Meet your unique needs with our flexible technology options</h3 >
+	
+
+
+
+
+
+
+								</div>
+								
+								<div class="subnav-main">
+									<div class="col col-1">
+											<div class="bizango_cms bizango_cms_content bizango_content_teaser textdiv_teaser" id="content_248609_teaser" data-bizango='{"monkey":"data", "field":"teaser", "object_type":"content", "cms_id":"248609", "label":"" ,  "tag":"div"}' >	
+		<p><a href="/trynorthwest/solutions-web-application" title="Manage projects with ease">Software</a></p>
+
+<p><a href="/trynorthwest/solutions-api-integration" title="Flexible integration options">API</a></p>
+		
+	</div>
+	
+
+
+
+
+
+
+									</div>
+
+										<div class="col col-2 divider">
+												<div class="bizango_cms bizango_cms_content bizango_content_leadin textdiv_leadin" id="content_248609_leadin" data-bizango='{"monkey":"data", "field":"leadin", "object_type":"content", "cms_id":"248609", "label":"" ,  "tag":"div"}' >	
+		<p><a href="/trynorthwest/soutions-banks" title="Mitigate project risk">Banks</a></p>
+
+<p><a href="/trynorthwest/solutions-credit-unions" title="Deliver exceptional service">Credit Unions</a></p>
+
+<p><a href="/trynorthwest/solutions-private-lenders" title="Streamlined field services">Private Lenders</a></p>
+		
+	</div>
+	
+
+
+
+
+
+
+										</div>
+
+								</div>
+						</div>
+					</div>
+
+
+
+			<li class="li-subnav" data-nav="646">
+
+			<a class="" id="nav_about" href="/trynorthwest/about" >Company</a>
+			</li>
+
+					<div class="subnav_frame" data-nav="646">
+						<div class="subnav-container">
+								<div class="subnav-title">
+									<h3 class="bizango_cms bizango_cms_content bizango_content_data1 textdiv_data1" id="content_220893_data1" data-bizango='{"monkey":"data", "field":"data1", "object_type":"content", "cms_id":"220893", "label":"", "tag":"h3"}' >Our core values are integrity, excellence, innovation, and service</h3 >
+	
+
+
+
+
+
+
+								</div>
+								
+								<div class="subnav-main">
+									<div class="col col-1">
+											<div class="bizango_cms bizango_cms_content bizango_content_teaser textdiv_teaser" id="content_220893_teaser" data-bizango='{"monkey":"data", "field":"teaser", "object_type":"content", "cms_id":"220893", "label":"" ,  "tag":"div"}' >	
+		<p><a href="/trynorthwest/about" title="Trusted since 1985">About Us</a></p>
+
+<p><a href="/trynorthwest/careers" title="Join our growing team">Careers&nbsp;</a></p>		
+	</div>
+	
+
+
+
+
+
+
+									</div>
+
+										<div class="col col-2 divider">
+												<div class="bizango_cms bizango_cms_content bizango_content_leadin textdiv_leadin" id="content_220893_leadin" data-bizango='{"monkey":"data", "field":"leadin", "object_type":"content", "cms_id":"220893", "label":"" ,  "tag":"div"}' >	
+		<p><a href="/trynorthwest/inspectors" title="Expand your business">Join Our Network</a></p>
+		
+	</div>
+	
+
+
+
+
+
+
+										</div>
+
+								</div>
+						</div>
+					</div>
+
+
+
+			<li class="li-subnav" data-nav="1298">
+
+			<a class="" id="nav_5ba1b26f14574e259d8b3c86347cd84daaf66084" href="/trynorthwest/terms" >Resources</a>
+			</li>
+
+					<div class="subnav_frame" data-nav="1298">
+						<div class="subnav-container">
+								<div class="subnav-title">
+									<h3 class="bizango_cms bizango_cms_content bizango_content_data1 textdiv_data1" id="content_265634_data1" data-bizango='{"monkey":"data", "field":"data1", "object_type":"content", "cms_id":"265634", "label":"", "tag":"h3"}' >Trusted By Leading Lenders</h3 >
+	
+
+
+
+
+
+
+								</div>
+								
+								<div class="subnav-main">
+									<div class="col col-1">
+											<div class="bizango_cms bizango_cms_content bizango_content_teaser textdiv_teaser" id="content_265634_teaser" data-bizango='{"monkey":"data", "field":"teaser", "object_type":"content", "cms_id":"265634", "label":"" ,  "tag":"div"}' >	
+		<p><a href="/trynorthwest/resources-news"><strong>Our Blog</strong></a><span class="light-weight">News and updates</span></p>
+
+<p>&nbsp;</p>
+
+<p><a href="/trynorthwest/vendor-compliance"><strong>Vendor Diligence</strong></a></p>
+
+<p><span class="light-weight">We take trust seriously</span></p>
+		
+	</div>
+	
+
+
+
+
+
+
+									</div>
+
+										<div class="col col-2 divider">
+												<div class="bizango_cms bizango_cms_content bizango_content_leadin textdiv_leadin" id="content_265634_leadin" data-bizango='{"monkey":"data", "field":"leadin", "object_type":"content", "cms_id":"265634", "label":"" ,  "tag":"div"}' >	
+		<p><a href="/trynorthwest/privacy-policy">Privacy Policy</a></p>
+
+<p>&nbsp;</p>
+
+<p><a href="/trynorthwest/terms">Terms of Service</a></p>
+		
+	</div>
+	
+
+
+
+
+
+
+										</div>
+
+								</div>
+						</div>
+					</div>
+
+
+	</ul>
+		<ul class="nav nav--utils">
+				<li><a class="button" id="" href="#cta" >Contact Us</a></li>
+				<li><a class="button" id="" href="/trynorthwest/login.php" >User Login</a></li>
+	</ul>
+</div>
+
+<div id="mobile_nav">
+	<a href="/trynorthwest/" class="logo"></a>
+	<button class="hamburger hamburger--spin header__nav-toggle mobile-icon z-3" data-toggle-show=".header__nav-wrapper" aria-expanded="false">
+		<span class="hamburger-box">
+			<span class="hamburger-inner"></span>
+		</span>
+	</button>
+	<ul class="nav">
+			<li role="none" class="mega-menu">
+						<a role="menuitem"  id="nav_services_mobile" href="/trynorthwest/services" >Services	
+								<div role="button" aria-label="toggles Services sub-menu" aria-expanded="false" class="plus">
+									<span></span>
+									<span></span>
+								</div>
+						</a>
+						<div class="mega-menu-content sub-menu">
+							<p><a href="/trynorthwest/services-project-monitoring" title="Trusted progress monitoring">Draw Inspections</a></p>
+
+<p><a href="/trynorthwest/services-risk-reviews" title="Mitigation project risk">Pre-Close&nbsp;Reviews</a></p>
+
+<p><a href="/trynorthwest/services-specialized-support" title="Convenient field services">Specialized&nbsp;Services</a></p>
+
+							<p><a href="/trynorthwest/services-residential" title="Solutions for residential construction loans">Residential</a></p>
+
+<p><a href="/trynorthwest/services-commercial" title="Solutions for commercial construction loans">Commercial</a></p>
+
+						</div>
+				</li>
+			<li role="none" class="mega-menu">
+						<a role="menuitem"  id="nav_solutions_mobile" href="/trynorthwest/solutions" >Solutions	
+								<div role="button" aria-label="toggles Solutions sub-menu" aria-expanded="false" class="plus">
+									<span></span>
+									<span></span>
+								</div>
+						</a>
+						<div class="mega-menu-content sub-menu">
+							<p><a href="/trynorthwest/solutions-web-application" title="Manage projects with ease">Software</a></p>
+
+<p><a href="/trynorthwest/solutions-api-integration" title="Flexible integration options">API</a></p>
+
+							<p><a href="/trynorthwest/soutions-banks" title="Mitigate project risk">Banks</a></p>
+
+<p><a href="/trynorthwest/solutions-credit-unions" title="Deliver exceptional service">Credit Unions</a></p>
+
+<p><a href="/trynorthwest/solutions-private-lenders" title="Streamlined field services">Private Lenders</a></p>
+
+						</div>
+				</li>
+			<li role="none" class="mega-menu">
+						<a role="menuitem"  id="nav_about_mobile" href="/trynorthwest/about" >Company	
+								<div role="button" aria-label="toggles Company sub-menu" aria-expanded="false" class="plus">
+									<span></span>
+									<span></span>
+								</div>
+						</a>
+						<div class="mega-menu-content sub-menu">
+							<p><a href="/trynorthwest/about" title="Trusted since 1985">About Us</a></p>
+
+<p><a href="/trynorthwest/careers" title="Join our growing team">Careers&nbsp;</a></p>
+							<p><a href="/trynorthwest/inspectors" title="Expand your business">Join Our Network</a></p>
+
+						</div>
+				</li>
+			<li role="none" class="mega-menu">
+						<a role="menuitem"  id="nav_5ba1b26f14574e259d8b3c86347cd84daaf66084_mobile" href="/trynorthwest/terms" >Resources	
+								<div role="button" aria-label="toggles Resources sub-menu" aria-expanded="false" class="plus">
+									<span></span>
+									<span></span>
+								</div>
+						</a>
+						<div class="mega-menu-content sub-menu">
+							<p><a href="/trynorthwest/resources-news"><strong>Our Blog</strong></a><span class="light-weight">News and updates</span></p>
+
+
+
+<p><a href="/trynorthwest/vendor-compliance"><strong>Vendor Diligence</strong></a></p>
+
+<p><span class="light-weight">We take trust seriously</span></p>
+
+							<p><a href="/trynorthwest/privacy-policy">Privacy Policy</a></p>
+
+
+
+<p><a href="/trynorthwest/terms">Terms of Service</a></p>
+
+						</div>
+				</li>
+			<li class="utils">
+				<a class="button" id="" href="#cta" >Contact Us</a>
+				<a class="button" id="" href="/trynorthwest/login.php" >User Login</a>
+			</li>
+	</ul>
+</div>
+
+<script>
+	$(document).ready(function(e){
+		// Initially remove all checks from checkboxes
+		$('.subnav-cb').each(function(index,subnav){
+			$(subnav).prop('checked', false);
+		})
+		// Checks if cb is checked after click so opposite
+		$('.subnav-cb').on('click', function() {
+			$this = $(this);
+			navId = $(this).attr('data-nav');
+			console.log(navId);
+			sameCb = $this.prop('checked');
+			console.log('sameCB', sameCb);
+			setTimeout(function(){
+			$('.subnav-cb').each(function(index,subnav){
+				$(subnav).not($this).prop('checked', false);
+			})
+			$('.subnav_frame').hide();
+			if (sameCb) {
+				$this.prop('checked', true);
+				$('.subnav_frame[data-nav="'+navId+'"]').show();
+			}
+			}, 300)
+		})
+
+		$('.subnav_frame').on('mouseenter',function(){
+			console.log('enter');
+			navId = $(this).attr('data-nav');
+			console.log($('#nav li[data-nav="'+navId+'"]'));
+			$('#nav li[data-nav="'+navId+'"]').addClass('li-hover')
+		})
+
+		$('.subnav_frame').on('mouseleave',function(){
+			console.log('Leave');
+			navId = $(this).attr('data-nav');
+			$('#nav li[data-nav="'+navId+'"]').removeClass('li-hover')
+		})
+
+		$('#nav_frame .nav > li + .subnav_frame').prev().find('a').click(function(e){
+			e.preventDefault();
+		})
+
+	})
+</script>
+	</div>
+</div>
+	 
+	<div id="hero">
+    
+    
+
+    
+
+
+
+
+        <div class='bg-img bg-img--hero' style='background-image: url(https://s3.amazonaws.com/hoth.bizango/images/752580/cove-bg.jpg)'> </div>
+        <div class='bg-img bg-img--mobile' style='background-image: url(https://s3.amazonaws.com/hoth.bizango/images/759462/mudassir-ali-bpB1twn1SGw-unsplash.jpg)'> </div>
+        
+                <div id="bg-video" style="background-image: url('https://s3.amazonaws.com/hoth.bizango/images/752580/cove-bg_feature.jpg')">
+
+                    <video id="vid"   autoplay="true" loop=""  muted>
+                        <source src="https://s3.amazonaws.com/hoth.bizango/assets/21335/NWCC_V3_-_compressed.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+    <div class="page_frame group">
+        <div class="all-cols-wrap flex flex--col fj--end">
+            <div class="top-section">
+                	<div class="bizango_cms bizango_cms_content bizango_content_prose textdiv_prose" id="content_220322_prose" data-bizango='{"monkey":"data", "field":"prose", "object_type":"content", "cms_id":"220322", "label":"" ,  "tag":"div"}' >	
+		<h4>&nbsp;</h4>
+
+<h4><span style="font-size:48px;">DRAW&nbsp; INSPECTIONS&nbsp; </span></h4>
+
+<h4><span style="font-size:48px;">MADE&nbsp; EASY</span></h4>
+
+<h2><span style="font-size:22px;">Nationwide Support Solutions&nbsp;For Modern Construction Lending</span></h2>
+
+<p><span style="color:#92d050;"><strong><span style="font-size: 22px;">We&#39;ve got you&nbsp;covered</span></strong></span></p>
+
+<p><span style="font-size:22px;"><a class="button green" href="/trynorthwest/demo">Request Demo</a></span></p>
+		
+	</div>
+	
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-section">
+        <div class="bouncy-arrow bouncy-arrow--clear"></div>
+        <div class="section_frame flex">
+            	<div class="bizango_cms bizango_cms_content bizango_content_rich2 textdiv_rich2" id="content_220322_rich2" data-bizango='{"monkey":"data", "field":"rich2", "object_type":"content", "cms_id":"220322", "label":"" ,  "tag":"div"}' >	
+		<h5 style="text-align: center;">Need a draw inspection&nbsp;right away? <span style="color:#92d050;">Let&rsquo;s see what we can do.</span></h5>
+		
+	</div>
+	
+
+
+
+
+
+
+            <form class="flex hero-home-form" action="/trynorthwest/lenders" method="get" data-intercept-form>
+                <div>
+                    <label for="zip" class="screen-reader">City or ZIP Code</label>
+                    <input id="zip" type="text" name="zip" placeholder="Enter City or Zip Code" required>
+                </div>
+                <div>
+                    <label for="project" class="screen-reader">Type of Project</label>
+                    <select id="project" type="text" name="project">
+                        <option disabled selected>Type of Project</option>
+                        <option value="commercial">Commercial</option>
+                        <option value="residential">Residential</option>
+                        <option value="land development">Land Development</option>
+                    </select>
+                </div>
+                <button type="submit">Check Coverage</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="bottom-section" style="display: none">
+        <div class="bouncy-arrow bouncy-arrow--clear"></div>
+        <div class="section_frame flex">
+            <div class="cols-3 mb0--last">
+                	<div class="bizango_cms bizango_cms_content bizango_content_teaser textdiv_teaser" id="content_220322_teaser" data-bizango='{"monkey":"data", "field":"teaser", "object_type":"content", "cms_id":"220322", "label":"" ,  "tag":"div"}' >	
+		<h4>Mitigate<br />
+<span style="color:#92d050;">Risk</span></h4>
+		
+	</div>
+	
+
+
+
+
+
+
+            </div>
+            <div class="cols-3 mb0--last">
+                	<div class="bizango_cms bizango_cms_content bizango_content_leadin textdiv_leadin" id="content_220322_leadin" data-bizango='{"monkey":"data", "field":"leadin", "object_type":"content", "cms_id":"220322", "label":"" ,  "tag":"div"}' >	
+			
+					
+		<h4>Ensure<br>
+<span style="color:#92d050;">Compliance</span></h4>
+		
+			
+	</div>
+	
+
+
+
+
+
+
+            </div>
+            <div class="cols-3 mb0--last">
+                	<div class="bizango_cms bizango_cms_content bizango_content_rich1 textdiv_rich1" id="content_220322_rich1" data-bizango='{"monkey":"data", "field":"rich1", "object_type":"content", "cms_id":"220322", "label":"" ,  "tag":"div"}' >	
+		<h4>Accelerate<br />
+<span style="color:#92d050;">Operations</span></h4>
+		
+	</div>
+	
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+<div data-sortable="220322">
+
+
+	<div class="block_container " data-content-id="221111"> 
+  <div class="block__bg-img block_container__bg-img" style="display:none;"></div>
+	
+	
+
+    <div id="221111" class="block block_id-221111  block_type__logo-slider background-color__light-gray-2">
+  <div class="block__bg-img"></div>
+	<div class="page_frame group">
+
+    <div class="all-cols-wrap ">
+    
+      <div class="col-1 mb0--last">
+
+          <div class="element__text element-0 ">
+            
+	<div class="bizango_cms bizango_cms_content bizango_content_prose textdiv_prose" id="content_221111_prose" data-bizango='{"monkey":"data", "field":"prose", "object_type":"content", "cms_id":"221111", "label":"" ,  "tag":"div"}' >	
+		<h3 style="text-align: center;">Trusted By Leading Lenders for Over 35 Years</h3>
+		
+	</div>
+	
+
+
+
+
+
+
+
+
+          </div>
+          <div class="element__logo-slider element-1 ">
+            
+
+<link href="/trynorthwest/stylesheets/blocks/slick.css?1789483192" media="screen" rel="stylesheet" type="text/css" />
+
+<div class="slider slider--logos">
+
+  <div class="slide" data-thumb="https://s3.amazonaws.com/hoth.bizango/images/752637/homestreet-bank_thumb.png">
+    <div class="cropped-image cropped-image__responsive-wrap">
+      <div class="cropped-image__bg-img" style="background-image:url(https://s3.amazonaws.com/hoth.bizango/images/752637/homestreet-bank_thumb.png)"></div>
+    </div>
+    <img src="https://s3.amazonaws.com/hoth.bizango/images/752637/homestreet-bank_thumb.png" >
+    	<div class="content_image_caption  bizango_cms bizango_cms_image bizango_image_caption content_image_caption" id="image_752637_caption" data-bizango='{"monkey":"data", "field":"caption", "object_type":"image", "cms_id":"752637", "label":"" ,  "tag":"div"}' >	
+				
+	</div>
+
+  </div>
+  
+
+  <div class="slide" data-thumb="https://s3.amazonaws.com/hoth.bizango/images/752638/ascent-capital_thumb.png">
+    <div class="cropped-image cropped-image__responsive-wrap">
+      <div class="cropped-image__bg-img" style="background-image:url(https://s3.amazonaws.com/hoth.bizango/images/752638/ascent-capital_thumb.png)"></div>
+    </div>
+    <img src="https://s3.amazonaws.com/hoth.bizango/images/752638/ascent-capital_thumb.png" >
+    	<div class="content_image_caption  bizango_cms bizango_cms_image bizango_image_caption content_image_caption" id="image_752638_caption" data-bizango='{"monkey":"data", "field":"caption", "object_type":"image", "cms_id":"752638", "label":"" ,  "tag":"div"}' >	
+				
+	</div>
+
+  </div>
+  
+
+  <div class="slide" data-thumb="https://s3.amazonaws.com/hoth.bizango/images/752640/timberland-bank_thumb.png">
+    <div class="cropped-image cropped-image__responsive-wrap">
+      <div class="cropped-image__bg-img" style="background-image:url(https://s3.amazonaws.com/hoth.bizango/images/752640/timberland-bank_thumb.png)"></div>
+    </div>
+    <img src="https://s3.amazonaws.com/hoth.bizango/images/752640/timberland-bank_thumb.png" >
+    	<div class="content_image_caption  bizango_cms bizango_cms_image bizango_image_caption content_image_caption" id="image_752640_caption" data-bizango='{"monkey":"data", "field":"caption", "object_type":"image", "cms_id":"752640", "label":"" ,  "tag":"div"}' >	
+				
+	</div>
+
+  </div>
+  
+
+  <div class="slide" data-thumb="https://s3.amazonaws.com/hoth.bizango/images/752665/umpqua-bank_thumb.png">
+    <div class="cropped-image cropped-image__responsive-wrap">
+      <div class="cropped-image__bg-img" style="background-image:url(https://s3.amazonaws.com/hoth.bizango/images/752665/umpqua-bank_thumb.png)"></div>
+    </div>
+    <img src="https://s3.amazonaws.com/hoth.bizango/images/752665/umpqua-bank_thumb.png" >
+    	<div class="content_image_caption  bizango_cms bizango_cms_image bizango_image_caption content_image_caption" id="image_752665_caption" data-bizango='{"monkey":"data", "field":"caption", "object_type":"image", "cms_id":"752665", "label":"" ,  "tag":"div"}' >	
+				
+	</div>
+
+  </div>
+  
+
+  <div class="slide" data-thumb="https://s3.amazonaws.com/hoth.bizango/images/752675/wafd-bank_thumb.png">
+    <div class="cropped-image cropped-image__responsive-wrap">
+      <div class="cropped-image__bg-img" style="background-image:url(https://s3.amazonaws.com/hoth.bizango/images/752675/wafd-bank_thumb.png)"></div>
+    </div>
+    <img src="https://s3.amazonaws.com/hoth.bizango/images/752675/wafd-bank_thumb.png" >
+    	<div class="content_image_caption  bizango_cms bizango_cms_image bizango_image_caption content_image_caption" id="image_752675_caption" data-bizango='{"monkey":"data", "field":"caption", "object_type":"image", "cms_id":"752675", "label":"" ,  "tag":"div"}' >	
+				
+	</div>
+
+  </div>
+  
+
+  <div class="slide" data-thumb="https://s3.amazonaws.com/hoth.bizango/images/752692/us-bank_thumb.png">
+    <div class="cropped-image cropped-image__responsive-wrap">
+      <div class="cropped-image__bg-img" style="background-image:url(https://s3.amazonaws.com/hoth.bizango/images/752692/us-bank_thumb.png)"></div>
+    </div>
+    <img src="https://s3.amazonaws.com/hoth.bizango/images/752692/us-bank_thumb.png" >
+    	<div class="content_image_caption  bizango_cms bizango_cms_image bizango_image_caption content_image_caption" id="image_752692_caption" data-bizango='{"monkey":"data", "field":"caption", "object_type":"image", "cms_id":"752692", "label":"" ,  "tag":"div"}' >	
+				
+	</div>
+
+  </div>
+  
+
+  <div class="slide" data-thumb="https://s3.amazonaws.com/hoth.bizango/images/761507/first-tech_thumb.png">
+    <div class="cropped-image cropped-image__responsive-wrap">
+      <div class="cropped-image__bg-img" style="background-image:url(https://s3.amazonaws.com/hoth.bizango/images/761507/first-tech_thumb.png)"></div>
+    </div>
+    <img src="https://s3.amazonaws.com/hoth.bizango/images/761507/first-tech_thumb.png" >
+    	<div class="content_image_caption  bizango_cms bizango_cms_image bizango_image_caption content_image_caption" id="image_761507_caption" data-bizango='{"monkey":"data", "field":"caption", "object_type":"image", "cms_id":"761507", "label":"" ,  "tag":"div"}' >	
+				
+	</div>
+
+  </div>
+  
+
+  <div class="slide" data-thumb="https://s3.amazonaws.com/hoth.bizango/images/761500/veristone_thumb.png">
+    <div class="cropped-image cropped-image__responsive-wrap">
+      <div class="cropped-image__bg-img" style="background-image:url(https://s3.amazonaws.com/hoth.bizango/images/761500/veristone_thumb.png)"></div>
+    </div>
+    <img src="https://s3.amazonaws.com/hoth.bizango/images/761500/veristone_thumb.png" >
+    	<div class="content_image_caption  bizango_cms bizango_cms_image bizango_image_caption content_image_caption" id="image_761500_caption" data-bizango='{"monkey":"data", "field":"caption", "object_type":"image", "cms_id":"761500", "label":"" ,  "tag":"div"}' >	
+				
+	</div>
+
+  </div>
+  
+
+  <div class="slide" data-thumb="https://s3.amazonaws.com/hoth.bizango/images/761528/heritage_thumb.png">
+    <div class="cropped-image cropped-image__responsive-wrap">
+      <div class="cropped-image__bg-img" style="background-image:url(https://s3.amazonaws.com/hoth.bizango/images/761528/heritage_thumb.png)"></div>
+    </div>
+    <img src="https://s3.amazonaws.com/hoth.bizango/images/761528/heritage_thumb.png" >
+    	<div class="content_image_caption  bizango_cms bizango_cms_image bizango_image_caption content_image_caption" id="image_761528_caption" data-bizango='{"monkey":"data", "field":"caption", "object_type":"image", "cms_id":"761528", "label":"" ,  "tag":"div"}' >	
+				
+	</div>
+
+  </div>
+  
+
+  <div class="slide" data-thumb="https://s3.amazonaws.com/hoth.bizango/images/761549/1stsecurity_thumb.png">
+    <div class="cropped-image cropped-image__responsive-wrap">
+      <div class="cropped-image__bg-img" style="background-image:url(https://s3.amazonaws.com/hoth.bizango/images/761549/1stsecurity_thumb.png)"></div>
+    </div>
+    <img src="https://s3.amazonaws.com/hoth.bizango/images/761549/1stsecurity_thumb.png" >
+    	<div class="content_image_caption  bizango_cms bizango_cms_image bizango_image_caption content_image_caption" id="image_761549_caption" data-bizango='{"monkey":"data", "field":"caption", "object_type":"image", "cms_id":"761549", "label":"" ,  "tag":"div"}' >	
+				
+	</div>
+
+  </div>
+  
+
+  <div class="slide" data-thumb="https://s3.amazonaws.com/hoth.bizango/images/761556/banner_thumb.png">
+    <div class="cropped-image cropped-image__responsive-wrap">
+      <div class="cropped-image__bg-img" style="background-image:url(https://s3.amazonaws.com/hoth.bizango/images/761556/banner_thumb.png)"></div>
+    </div>
+    <img src="https://s3.amazonaws.com/hoth.bizango/images/761556/banner_thumb.png" >
+    	<div class="content_image_caption  bizango_cms bizango_cms_image bizango_image_caption content_image_caption" id="image_761556_caption" data-bizango='{"monkey":"data", "field":"caption", "object_type":"image", "cms_id":"761556", "label":"" ,  "tag":"div"}' >	
+				
+	</div>
+
+  </div>
+  
+
+  <div class="slide" data-thumb="https://s3.amazonaws.com/hoth.bizango/images/761563/tcb_thumb.png">
+    <div class="cropped-image cropped-image__responsive-wrap">
+      <div class="cropped-image__bg-img" style="background-image:url(https://s3.amazonaws.com/hoth.bizango/images/761563/tcb_thumb.png)"></div>
+    </div>
+    <img src="https://s3.amazonaws.com/hoth.bizango/images/761563/tcb_thumb.png" >
+    	<div class="content_image_caption  bizango_cms bizango_cms_image bizango_image_caption content_image_caption" id="image_761563_caption" data-bizango='{"monkey":"data", "field":"caption", "object_type":"image", "cms_id":"761563", "label":"" ,  "tag":"div"}' >	
+				
+	</div>
+
+  </div>
+  
+
+  <div class="slide" data-thumb="https://s3.amazonaws.com/hoth.bizango/images/761570/mountain-pacific_thumb.png">
+    <div class="cropped-image cropped-image__responsive-wrap">
+      <div class="cropped-image__bg-img" style="background-image:url(https://s3.amazonaws.com/hoth.bizango/images/761570/mountain-pacific_thumb.png)"></div>
+    </div>
+    <img src="https://s3.amazonaws.com/hoth.bizango/images/761570/mountain-pacific_thumb.png" >
+    	<div class="content_image_caption  bizango_cms bizango_cms_image bizango_image_caption content_image_caption" id="image_761570_caption" data-bizango='{"monkey":"data", "field":"caption", "object_type":"image", "cms_id":"761570", "label":"" ,  "tag":"div"}' >	
+				
+	</div>
+
+  </div>
+  
+
+  <div class="slide" data-thumb="https://s3.amazonaws.com/hoth.bizango/images/765328/output-onlinepngtools__1__thumb.png">
+    <div class="cropped-image cropped-image__responsive-wrap">
+      <div class="cropped-image__bg-img" style="background-image:url(https://s3.amazonaws.com/hoth.bizango/images/765328/output-onlinepngtools__1__thumb.png)"></div>
+    </div>
+    <img src="https://s3.amazonaws.com/hoth.bizango/images/765328/output-onlinepngtools__1__thumb.png" >
+    	<div class="content_image_caption  bizango_cms bizango_cms_image bizango_image_caption content_image_caption" id="image_765328_caption" data-bizango='{"monkey":"data", "field":"caption", "object_type":"image", "cms_id":"765328", "label":"" ,  "tag":"div"}' >	
+				
+	</div>
+
+  </div>
+  
+
+  <div class="slide" data-thumb="https://s3.amazonaws.com/hoth.bizango/images/1339172/image_-_2025-05-07T082544.367_thumb.png">
+    <div class="cropped-image cropped-image__responsive-wrap">
+      <div class="cropped-image__bg-img" style="background-image:url(https://s3.amazonaws.com/hoth.bizango/images/1339172/image_-_2025-05-07T082544.367_thumb.png)"></div>
+    </div>
+    <img src="https://s3.amazonaws.com/hoth.bizango/images/1339172/image_-_2025-05-07T082544.367_thumb.png" >
+    	<div class="content_image_caption  bizango_cms bizango_cms_image bizango_image_caption content_image_caption" id="image_1339172_caption" data-bizango='{"monkey":"data", "field":"caption", "object_type":"image", "cms_id":"1339172", "label":"" ,  "tag":"div"}' >	
+				
+	</div>
+
+  </div>
+  
+</div>
+
+<script defer="defer" src="/trynorthwest/javascripts/blocks/slick.min.js?1789483190" type="text/javascript"></script>
+<script>
+  $(document).ready(function(){
+    $('.block_id-221111 .slider').slick({
+      autoplay: true,
+      arrows: false,
+      speed: 3000,
+      swipe: false,
+      slidesToShow: 8,
+      autoplaySpeed: 0,
+      cssEase: 'linear',
+      responsive: [{
+
+      breakpoint: 1050,
+      settings: {
+        slidesToShow: 7
+      }
+
+    }, {
+
+      breakpoint: 950,
+      settings: {
+        slidesToShow: 6,
+      }
+
+    }, {
+
+      breakpoint: 850,
+      settings: {
+        slidesToShow: 5,
+      }
+
+    }, {
+
+      breakpoint: 750,
+      settings: {
+        slidesToShow: 4,
+      }
+
+    }, {
+
+      breakpoint: 550,
+      settings: {
+        slidesToShow: 3,
+      }
+
+    }, {
+
+      breakpoint: 400,
+      settings: {
+        slidesToShow: 2,
+      }
+
+    }],
+      
+    });
+  });
+  /*
+    Additional options can be set on this slider from anywhere:
+    
+      $('.block_id-221111 .slider').slick('slickSetOption', {autoplay: true, autoplaySpeed: 5000}, true);
+
+    See https://github.com/kenwheeler/slick for all options
+  */
+</script>
+          </div>
+
+      </div>
+
+    </div>  
+  </div>
+</div>
+	
+	</div>
+
+
+	<div class="block_container " data-content-id="237198"> 
+  <div class="block__bg-img block_container__bg-img" style="display:none;"></div>
+	
+	
+
+    <div id="237198" class="block block_id-237198  block_type__2-column-even background-color__light-gray-2 chevron-style__false">
+  <div class="block__bg-img"></div>
+	<div class="page_frame group">
+
+    <div class="all-cols-wrap ">
+    
+      <div class="col-1 col@tablet col-left@tablet">
+
+          <div class="element__image element-0 ">
+            
+
+
+
+    
+    <div class="cropped-image cropped-image__responsive-wrap">
+      <div class="cropped-image__bg-img" style="background-image:url(https://s3.amazonaws.com/hoth.bizango/images/835143/shutterstock_519019975_feature.jpeg)"></div>
+    </div>  
+    <img class="illustration" src="https://s3.amazonaws.com/hoth.bizango/images/835143/shutterstock_519019975_feature.jpeg" alt="">
+    
+
+          </div>
+          <div class="element__text element-1 ">
+            
+	<div class="bizango_cms bizango_cms_content bizango_content_prose textdiv_prose" id="content_237198_prose" data-bizango='{"monkey":"data", "field":"prose", "object_type":"content", "cms_id":"237198", "label":"" ,  "tag":"div"}' >	
+				
+	</div>
+	
+
+
+
+
+
+
+
+
+          </div>
+
+      </div>
+
+    
+      <div class="col-2 col@tablet col-right@tablet">
+
+          <div class="element__image element-0 ">
+            
+
+
+
+
+          </div>
+          <div class="element__text element-1 ">
+            
+	<div class="bizango_cms bizango_cms_content bizango_content_rich1 textdiv_rich1" id="content_237198_rich1" data-bizango='{"monkey":"data", "field":"rich1", "object_type":"content", "cms_id":"237198", "label":"" ,  "tag":"div"}' >	
+		<h3>We emphasize quality and speed&nbsp;- so you can&nbsp;lend with confidence and ease.&nbsp;</h3>
+
+<p>&nbsp;</p>
+
+<p>We provide excellent service&nbsp;by combining our seasoned&nbsp;customer support team with&nbsp;with&nbsp;thousands of highly qualified field inspectors across all 50 states.</p>
+
+<p>Wherever you need us, we&nbsp;deliver&nbsp;accurate&nbsp;boots-on-the-ground insights with unmatched turnaround time.</p>
+
+<p><a class="button" href="/trynorthwest/services-project-monitoring"><span style="color:#92d050;">&nbsp;Learn More</span></a></p>
+		
+	</div>
+	
+
+
+
+
+
+
+
+
+          </div>
+
+      </div>
+
+    </div>  
+  </div>
+</div>
+	
+	</div>
+
+
+	<div class="block_container " data-content-id="243472"> 
+  <div class="block__bg-img block_container__bg-img" style="display:none;"></div>
+	
+	
+
+    <div id="243472" class="block block_id-243472  block_type__2-column-bigright background-color__light-gray-2 chevron-style__false">
+  <div class="block__bg-img"></div>
+	<div class="page_frame group">
+
+    <div class="all-cols-wrap ">
+    
+      <div class="col-1 col@tablet col-left@tablet">
+
+          <div class="element__image element-0 ">
+            
+
+
+
+
+          </div>
+          <div class="element__text element-1 ">
+            
+	<div class="bizango_cms bizango_cms_content bizango_content_prose textdiv_prose" id="content_243472_prose" data-bizango='{"monkey":"data", "field":"prose", "object_type":"content", "cms_id":"243472", "label":"" ,  "tag":"div"}' >	
+		<h3 style="text-align: right;"><span style="font-size:28px;"><span style="color: black; font-family: &quot;Minion Pro&quot;; background-color: transparent;">&nbsp;You don&#39;t have to&nbsp;choose between&nbsp; technology and a trusted partner.</span></span><span style="color: black; font-family: &quot;Minion Pro&quot;; font-size: 26px; background-color: transparent;">&nbsp;</span></h3>
+
+<p>&nbsp;</p>
+
+<p style="text-align: right;">Our services are available through a complimentary cloud-based system that is both simple and secure.</p>
+
+<p style="text-align: right;">We also offer access to our leading field services through either software partners or via a direct API integration. Contact us today for details!&nbsp;</p>
+
+<p style="text-align: right;"><a class="button" href="/trynorthwest/solutions-web-application"><span style="color:#92d050;">Learn more</span></a></p>
+		
+	</div>
+	
+
+
+
+
+
+
+
+
+          </div>
+
+      </div>
+
+    
+      <div class="col-2 col@tablet col-right@tablet">
+
+          <div class="element__image element-0 ">
+            
+
+
+
+    
+    <div class="cropped-image cropped-image__responsive-wrap">
+      <div class="cropped-image__bg-img" style="background-image:url(https://s3.amazonaws.com/hoth.bizango/images/872766/smartmockups_kvgvapds_home.png)"></div>
+    </div>  
+    <img class="illustration" src="https://s3.amazonaws.com/hoth.bizango/images/872766/smartmockups_kvgvapds_home.png" alt="">
+    
+
+          </div>
+          <div class="element__text element-1 ">
+            
+	<div class="bizango_cms bizango_cms_content bizango_content_rich1 textdiv_rich1" id="content_243472_rich1" data-bizango='{"monkey":"data", "field":"rich1", "object_type":"content", "cms_id":"243472", "label":"" ,  "tag":"div"}' >	
+				
+	</div>
+	
+
+
+
+
+
+
+
+
+          </div>
+
+      </div>
+
+    </div>  
+  </div>
+</div>
+	
+	</div>
+
+
+	<div class="block_container " data-content-id="243469"> 
+  <div class="block__bg-img block_container__bg-img" style="display:none;"></div>
+	
+	
+
+    <div id="243469" class="block block_id-243469 block_type__service-panels padding-bottom__none nothing__none">
+  <div class="block__bg-img"></div>
+	<div class="page_frame group">
+	  <div class="top-section">
+      	<div class="bizango_cms bizango_cms_content bizango_content_prose textdiv_prose" id="content_243469_prose" data-bizango='{"monkey":"data", "field":"prose", "object_type":"content", "cms_id":"243469", "label":"" ,  "tag":"div"}' >	
+		<h3>Your trusted one-stop partner for&nbsp;construction lending field services and support</h3>
+		
+	</div>
+	
+
+
+
+
+
+
+    </div>
+    <div class="bottom-section flex flex--wrap fa--ctr">
+      <div class="panels_container flex">
+        <div class="panel bz-img">
+          
+
+              <div class='bg-img' style='background-image: url(https://s3.amazonaws.com/hoth.bizango/images/753544/NWCC-services1.jpg)'> </div>
+          	<div class="bizango_cms bizango_cms_content bizango_content_teaser textdiv_teaser" id="content_243469_teaser" data-bizango='{"monkey":"data", "field":"teaser", "object_type":"content", "cms_id":"243469", "label":"" ,  "tag":"div"}' >	
+		<h2 style="text-align: center;"><span style="color:#92d050;">Post-Close Monitoring</span></h2>
+
+<p>- Residential Draw Inspections</p>
+
+<p>- Commercial Draw Inspections</p>
+
+<p>- Land Development&nbsp;Inspections</p>
+
+<p>- Foundation Verifications</p>
+
+<p><a class="button" href="/trynorthwest/services-project-monitoring"><span style="color:#92d050;">Learn More</span></a></p>
+		
+	</div>
+	
+
+
+
+
+
+
+        </div>
+        <div class="panel bz-img">
+          
+
+              <div class='bg-img' style='background-image: url(https://s3.amazonaws.com/hoth.bizango/images/753551/NWCC-services2.jpg)'> </div>
+          	<div class="bizango_cms bizango_cms_content bizango_content_leadin textdiv_leadin" id="content_243469_leadin" data-bizango='{"monkey":"data", "field":"leadin", "object_type":"content", "cms_id":"243469", "label":"" ,  "tag":"div"}' >	
+		<h2 style="text-align: center;"><span style="color:#92d050;">Pre-Close Assessments</span></h2>
+
+<p>- Project Cost Reviews</p>
+
+<p>- Contractor Background Checks</p>
+
+<p>- Pre-Construction Inspections</p>
+
+<p>- Clear Lot Inspections</p>
+
+<p><a class="button" href="/trynorthwest/services-risk-reviews"><span style="color:#92d050;">Learn More</span></a></p>
+		
+	</div>
+	
+
+
+
+
+
+
+        </div>
+        <div class="panel bz-img">
+          
+
+              <div class='bg-img' style='background-image: url(https://s3.amazonaws.com/hoth.bizango/images/753558/NWCC-services3.jpg)'> </div>
+          	<div class="bizango_cms bizango_cms_content bizango_content_rich1 textdiv_rich1" id="content_243469_rich1" data-bizango='{"monkey":"data", "field":"rich1", "object_type":"content", "cms_id":"243469", "label":"" ,  "tag":"div"}' >	
+		<h2 style="text-align: center;"><span style="color:#92d050;">Other Support Services</span></h2>
+
+<p>- Collateral Assessments</p>
+
+<p>- Insurance Draft Loss Reviews</p>
+
+<p>- Property Status Reports</p>
+
+<p>&nbsp;</p>
+
+<p><a class="button" href="/trynorthwest/services-specialized-support"><span style="color:#92d050;">Learn More</span></a></p>
+		
+	</div>
+	
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="button_frame">
+        <a href="/trynorthwest/about" class="button button--services">About Us</a>
+      </div>
+    </div>
+	</div>
+</div>
+
+	
+	</div>
+
+
+	<div class="block_container " data-content-id="221115"> 
+  <div class="block__bg-img block_container__bg-img" style="display:none;"></div>
+	
+	
+
+    <div id="221115" class="block block_id-221115 block_type__offset-list flip-content__right background-color__light-gray cta-style__false offset-parallax__none">
+  <div class="block__bg-img"></div>
+	<div class="page_frame group">
+	  <div class="all-cols-wrap flex">
+
+      <div class="col-1 offset-img-col">
+        <div class="offset-img--lrg ">
+        
+
+            <div class='bg-img' style='background-image: url(https://s3.amazonaws.com/hoth.bizango/images/753733/construction-view-2.jpg)'> </div>
+        </div>
+        <div class="offset-img--sml ">
+        
+
+            <div class='bg-img' style='background-image: url(https://s3.amazonaws.com/hoth.bizango/images/752743/contract-review.jpg)'> </div>
+        </div>
+      </div>
+
+      <div class="col-2 list-col">
+        <div class="list">
+          
+
+              <img src='https://s3.amazonaws.com/hoth.bizango/images/752741/shield-icon.png' alt=''>
+            	<div class="bizango_cms bizango_cms_content bizango_content_prose textdiv_prose" id="content_221115_prose" data-bizango='{"monkey":"data", "field":"prose", "object_type":"content", "cms_id":"221115", "label":"" ,  "tag":"div"}' >	
+		<h3>Mitigate Risk</h3>
+
+<ul>
+	<li>Expert quality review of every report</li>
+	<li>Consistent, objective, accurate results</li>
+	<li>Lendor qualified vendor</li>
+</ul>
+		
+	</div>
+	
+
+
+
+
+
+
+        </div>
+
+        <div class="list">
+          
+
+              <img src='https://s3.amazonaws.com/hoth.bizango/images/752769/clipboard-icon.png' alt=''>
+            	<div class="bizango_cms bizango_cms_content bizango_content_rich1 textdiv_rich1" id="content_221115_rich1" data-bizango='{"monkey":"data", "field":"rich1", "object_type":"content", "cms_id":"221115", "label":"" ,  "tag":"div"}' >	
+		<h3>Streamline Operations</h3>
+
+<ul>
+	<li>Industry leading turn-times for draw inspections</li>
+	<li>Robust nationwide coverage</li>
+	<li>Consistent fees reduce administrative overhead</li>
+</ul>
+		
+	</div>
+	
+
+
+
+
+
+
+        </div>
+
+        <div class="list">
+          
+
+              <img src='https://s3.amazonaws.com/hoth.bizango/images/752742/flow-chart-icon.png' alt=''>
+            	<div class="bizango_cms bizango_cms_content bizango_content_rich2 textdiv_rich2" id="content_221115_rich2" data-bizango='{"monkey":"data", "field":"rich2", "object_type":"content", "cms_id":"221115", "label":"" ,  "tag":"div"}' >	
+		<h3>Seamless Access</h3>
+
+<ul>
+	<li>Complimentary access to NWCC application</li>
+	<li>Integrations in place with software partners</li>
+	<li>Comprehensive API options available&nbsp;</li>
+</ul>
+
+<p>&nbsp;</p>
+		
+	</div>
+	
+
+
+
+
+
+
+        </div>
+    </div>
+
+	</div>
+</div>
+</div>
+
+<script defer="defer" src="/trynorthwest/javascripts/blocks/parallax.min.js?1789483190" type="text/javascript"></script>
+<script>  
+
+  $(document).ready(function(){  
+    $('.block_id-221115.parallax__yes .offset-img--lrg').parallax({
+      imageSrc: "https://s3.amazonaws.com/hoth.bizango/images/753733/construction-view-2_gallery.jpg"
+      // , bleed: 50
+// bring back bleed if jank becomes an issue
+    });
+    /* see http://pixelcog.github.io/parallax.js/ for other options */
+  });  
+
+
+</script>
+	
+	</div>
+
+
+	<div class="block_container " data-content-id="221112"> 
+  <div class="block__bg-img block_container__bg-img" style="display:none;"></div>
+	
+	
+
+    <div id="221112" class="block block_id-221112 columns__3 flex flex--col fj--ctr cols-flex cols-fj--sb block_type__infographic-block background-color__medium-teal chevron-style__false background-position__top">
+  <div class="block__bg-img"></div>
+	<div class="page_frame group">
+    
+<style>
+
+  
+  .block_id-221112 .block__bg-img {
+    background-image: url(https://s3.amazonaws.com/hoth.bizango/images/752804/us-map_feature.jpg);
+  }
+  @media only screen and (min-width: 1300px){
+
+    .block_id-221112 .block__bg-img {
+      background-image: url(https://s3.amazonaws.com/hoth.bizango/images/752804/us-map.jpg);
+    }
+  }
+  
+
+</style>
+
+<script defer="defer" src="/trynorthwest/javascripts/blocks/parallax.min.js?1789483190" type="text/javascript"></script>
+<script>  
+
+  $(document).ready(function(){  
+    $('.block_id-221112.parallax__yes').parallax({
+      imageSrc: "https://s3.amazonaws.com/hoth.bizango/images/752804/us-map_feature.jpg"
+//       , bleed: 50
+// bring back bleed if jank becomes an issue
+    });
+    /* see http://pixelcog.github.io/parallax.js/ for other options */
+  });  
+
+</script>  
+
+    <div class="all-cols-wrap ">
+    
+      <div class="col-1 ">
+
+          <div class="element__text element-0 ">
+            
+	<div class="bizango_cms bizango_cms_content bizango_content_prose textdiv_prose" id="content_221112_prose" data-bizango='{"monkey":"data", "field":"prose", "object_type":"content", "cms_id":"221112", "label":"" ,  "tag":"div"}' >	
+		<h1><span style="font-size:72px;">40</span></h1>
+
+<h2><span style="color:#92d050;">Years of Service</span></h2>
+
+<h5><span style="color:#ebebeb;">We&rsquo;ve seen it all and<br />
+we&rsquo;re here to help.</span></h5>
+		
+	</div>
+	
+
+
+
+
+
+
+
+
+          </div>
+
+      </div>
+
+    
+      <div class="col-2 ">
+
+          <div class="element__text element-0 ">
+            
+	<div class="bizango_cms bizango_cms_content bizango_content_rich1 textdiv_rich1" id="content_221112_rich1" data-bizango='{"monkey":"data", "field":"rich1", "object_type":"content", "cms_id":"221112", "label":"" ,  "tag":"div"}' >	
+		<h1><span style="font-size:72px;">Nationwide</span></h1>
+
+<h2><span style="color:#92d050;">Field Coverage</span></h2>
+
+<h5><span style="color:#ebebeb;">Reliable service, whenever and&nbsp;wherever you need it</span></h5>
+		
+	</div>
+	
+
+
+
+
+
+
+
+
+          </div>
+
+      </div>
+
+    
+      <div class="col-3 ">
+
+          <div class="element__text element-0 ">
+            
+	<div class="bizango_cms bizango_cms_content bizango_content_rich2 textdiv_rich2" id="content_221112_rich2" data-bizango='{"monkey":"data", "field":"rich2", "object_type":"content", "cms_id":"221112", "label":"" ,  "tag":"div"}' >	
+		<h1><span style="font-size:72px;">99%</span></h1>
+
+<h2><span style="color:#92d050;">Business Retention</span></h2>
+
+<h5><span style="color:#ebebeb;">Supporting an expanding base of&nbsp;satisfied and&nbsp;successful lenders</span></h5>
+		
+	</div>
+	
+
+
+
+
+
+
+
+
+          </div>
+
+      </div>
+
+    </div>  
+  </div>
+</div>
+	
+	</div>
+
+
+	<div class="block_container " data-content-id="221116"> 
+  <div class="block__bg-img block_container__bg-img" style="display:none;"></div>
+	
+	
+
+    <div id="221116" class="block block_id-221116  block_type__box-block background-color__light-gray-2 chevron-style__false">
+  <div class="block__bg-img"></div>
+	<div class="page_frame group">
+
+    <div class="all-cols-wrap ">
+    
+      <div class="col-1 ">
+
+          <div class="element__text element-0 ">
+            
+	<div class="bizango_cms bizango_cms_content bizango_content_prose textdiv_prose" id="content_221116_prose" data-bizango='{"monkey":"data", "field":"prose", "object_type":"content", "cms_id":"221116", "label":"" ,  "tag":"div"}' >	
+		<h3>At NWCC, we help lenders assess and coordinate&nbsp;the construction draw process&nbsp;with confidence and ease.</h3>
+		
+	</div>
+	
+
+
+
+
+
+
+
+
+          </div>
+          <div class="element__text element-1 ">
+            
+	<div class="bizango_cms bizango_cms_content bizango_content_rich1 textdiv_rich1" id="content_221116_rich1" data-bizango='{"monkey":"data", "field":"rich1", "object_type":"content", "cms_id":"221116", "label":"" ,  "tag":"div"}' >	
+		<p>Construction lending done right requires&nbsp;a streamlined draw inspection process that is dependable, intuitive, and flexible.</p>
+
+<p>But it&#39;s not easy. Tedious administration, onerous requirements, varying&nbsp;project types, and changes to the original plan&nbsp;can compound to make a consistent construction loan management process feel out of reach.</p>
+		
+	</div>
+	
+
+
+
+
+
+
+
+
+          </div>
+
+      </div>
+
+    
+      <div class="col-2 ">
+
+          <div class="element__text element-0 ">
+            
+	<div class="bizango_cms bizango_cms_content bizango_content_rich2 textdiv_rich2" id="content_221116_rich2" data-bizango='{"monkey":"data", "field":"rich2", "object_type":"content", "cms_id":"221116", "label":"" ,  "tag":"div"}' >	
+		<p>We believe the construction lending doesn&rsquo;t have to be difficult. We understand the challenges of coordinating draw inspections and fund disbursement support services for demanding builders and unique projects. That&rsquo;s why we built a system that works and have been continually enhancing it for 40 years.</p>
+
+<p>Our nationwide network of vetted inspectors enables rapid, expert monitoring for any project. Our client service team provides an additional layer of quality control and human judgement tempered by over 15&nbsp;years of average experience. Our cloud-based system provides&nbsp;easy visibility to your projects while also priorizing security.</p>
+
+<p>Contact us today so you can stop struggling with the complex administration of construction draw inspections and and focus on what you do best.</p>
+
+<p><font color="#92d050"><a class="button" href="/trynorthwest/careers">Join Our Team</a></font></p>
+		
+	</div>
+	
+
+
+
+
+
+
+
+
+          </div>
+
+      </div>
+
+    </div>  
+  </div>
+</div>
+	
+	</div>
+
+
+	<div class="block_container " data-content-id="250625"> 
+  <div class="block__bg-img block_container__bg-img" style="display:none;"></div>
+	
+	
+
+    <div id="250625" class="block block_id-250625  block_type__1-column background-color__light-gray-2 chevron-style__false">
+  <div class="block__bg-img"></div>
+	<div class="page_frame group">
+
+    <div class="all-cols-wrap ">
+    
+      <div class="col-1 ">
+
+          <div class="element__attachment element-0 ">
+            
+
+
+
+          </div>
+          <div class="element__image element-1 ">
+            
+
+
+
+
+          </div>
+          <div class="element__text element-2 ">
+            
+	<div class="bizango_cms bizango_cms_content bizango_content_prose textdiv_prose" id="content_250625_prose" data-bizango='{"monkey":"data", "field":"prose", "object_type":"content", "cms_id":"250625", "label":"" ,  "tag":"div"}' >	
+		<h3 style="text-align: center;">Proven Solutions For Your Industry</h3>
+
+<p style="text-align: center;">Our solutions&nbsp;seamlessly&nbsp;support existing workflows, address&nbsp;key priorities, and drive efficiency across your unique organization.</p>
+		
+	</div>
+	
+
+
+
+
+
+
+
+
+          </div>
+
+      </div>
+
+    </div>  
+  </div>
+</div>
+	
+	</div>
+
+
+	<div class="block_container " data-content-id="250624"> 
+  <div class="block__bg-img block_container__bg-img" style="display:none;"></div>
+	
+	
+
+    <div id="250624" class="block block_id-250624 columns__3 block_type__3-column background-color__light-gray-2 chevron-style__false narrow-content__false">
+  <div class="block__bg-img"></div>
+	<div class="page_frame group">
+
+    <div class="all-cols-wrap ">
+    
+      <div class="col-1 ">
+
+          <div class="element__image element-0 ">
+            
+
+
+
+    
+    <div class="cropped-image cropped-image__responsive-wrap">
+      <div class="cropped-image__bg-img" style="background-image:url(https://s3.amazonaws.com/hoth.bizango/images/931694/360_F_323664516_h0MlexrdXe8Cg9J9Zb96059JhOmazI5W_feature.jpeg)"></div>
+    </div>  
+    <img class="illustration" src="https://s3.amazonaws.com/hoth.bizango/images/931694/360_F_323664516_h0MlexrdXe8Cg9J9Zb96059JhOmazI5W_feature.jpeg" alt="">
+    
+
+          </div>
+          <div class="element__text element-1 ">
+            
+	<div class="bizango_cms bizango_cms_content bizango_content_prose textdiv_prose" id="content_250624_prose" data-bizango='{"monkey":"data", "field":"prose", "object_type":"content", "cms_id":"250624", "label":"" ,  "tag":"div"}' >	
+		<h3 style="text-align: center;">For Banks</h3>
+
+<p style="text-align: center;">Mitigate risk,&nbsp;streamlining your operations, and align&nbsp;to regulatory guidance.</p>
+
+<p style="text-align: center;"><a class="button" href="/trynorthwest/soutions-banks"><span style="color:#92d050;">Learn More</span></a></p>
+		
+	</div>
+	
+
+
+
+
+
+
+
+
+          </div>
+
+      </div>
+
+    
+      <div class="col-2 ">
+
+          <div class="element__image element-0 ">
+            
+
+
+
+    
+    <div class="cropped-image cropped-image__responsive-wrap">
+      <div class="cropped-image__bg-img" style="background-image:url(https://s3.amazonaws.com/hoth.bizango/images/931715/istockphoto-1190969143-612x612_home.jpeg)"></div>
+    </div>  
+    <img class="illustration" src="https://s3.amazonaws.com/hoth.bizango/images/931715/istockphoto-1190969143-612x612_home.jpeg" alt="">
+    
+
+          </div>
+          <div class="element__text element-1 ">
+            
+	<div class="bizango_cms bizango_cms_content bizango_content_rich1 textdiv_rich1" id="content_250624_rich1" data-bizango='{"monkey":"data", "field":"rich1", "object_type":"content", "cms_id":"250624", "label":"" ,  "tag":"div"}' >	
+		<h3 style="text-align: center;">For Private Lenders</h3>
+
+<p style="text-align: center;">Rapidly scale your lending program while protecting investors&#39; capital.</p>
+
+<p style="text-align: center;"><a class="button" href="/trynorthwest/solutions-private-lenders"><span style="color:#92d050;">Learn More</span></a></p>
+		
+	</div>
+	
+
+
+
+
+
+
+
+
+          </div>
+
+      </div>
+
+    
+      <div class="col-3 ">
+
+          <div class="element__image element-0 ">
+            
+
+
+
+    
+    <div class="cropped-image cropped-image__responsive-wrap">
+      <div class="cropped-image__bg-img" style="background-image:url(https://s3.amazonaws.com/hoth.bizango/images/931701/istockphoto-1203814636-612x612_home.jpeg)"></div>
+    </div>  
+    <img class="illustration" src="https://s3.amazonaws.com/hoth.bizango/images/931701/istockphoto-1203814636-612x612_home.jpeg" alt="">
+    
+
+          </div>
+          <div class="element__text element-1 ">
+            
+	<div class="bizango_cms bizango_cms_content bizango_content_rich2 textdiv_rich2" id="content_250624_rich2" data-bizango='{"monkey":"data", "field":"rich2", "object_type":"content", "cms_id":"250624", "label":"" ,  "tag":"div"}' >	
+		<h3 style="text-align: center;">For Credit Unions</h3>
+
+<p style="text-align: center;">Exceed your members&#39; expectations with&nbsp;excellent customer service.</p>
+
+<p style="text-align: center;"><a class="button" href="/trynorthwest/solutions-credit-unions"><span style="color:#92d050;">Learn More</span></a></p>
+		
+	</div>
+	
+
+
+
+
+
+
+
+
+          </div>
+
+      </div>
+
+    </div>  
+  </div>
+</div>
+	
+	</div>
+
+
+	<div class="block_container " data-content-id="221148"> 
+  <div class="block__bg-img block_container__bg-img" style="display:none;"></div>
+	
+	
+
+    <div id="221148" class="block block_id-221148  block_type__testimonial show-dots__yes">
+  <div class="block__bg-img"></div>
+	<div class="page_frame group">
+
+    <div class="all-cols-wrap ">
+    
+      <div class="col-1 ">
+
+          <div class="element__testimonial element-0 ">
+            
+<link href="/trynorthwest/stylesheets/blocks/slick.css?1789483192" media="screen" rel="stylesheet" type="text/css" />
+
+
+    
+
+
+    <div class="slider">
+        <div class="slide fj--ctr mb0--last bz-img--l">
+        
+
+            <div class='bg-img' style='background-image: url(https://s3.amazonaws.com/hoth.bizango/images/762088/geran-de-klerk-akAVu0IN5RY-unsplash.jpg)'> </div>
+          	<div class="bizango_cms bizango_cms_content bizango_content_prose textdiv_prose" id="content_221150_prose" data-bizango='{"monkey":"data", "field":"prose", "object_type":"content", "cms_id":"221150", "label":"" ,  "tag":"div"}' >	
+		<h3>&quot;The process to request inspections or reviews is super convenient and everyone at NWCC is so helpful and great to work with! Thanks for being such an important part of the success we have with these construction loans!&quot;</h3>
+
+<h5>1st Security Bank, Sharon</h5>
+		
+	</div>
+	
+
+
+
+
+
+
+        </div>
+        <div class="slide fj--ctr mb0--last bz-img--l">
+        
+
+            <div class='bg-img' style='background-image: url(https://s3.amazonaws.com/hoth.bizango/images/759455/alessandro-gelmini-5yUgh_V9zdo-unsplash.jpg)'> </div>
+          	<div class="bizango_cms bizango_cms_content bizango_content_prose textdiv_prose" id="content_222452_prose" data-bizango='{"monkey":"data", "field":"prose", "object_type":"content", "cms_id":"222452", "label":"" ,  "tag":"div"}' >	
+		<h3>It is so great when you ask NWCC for anything. They get right on top of it. They are really on their game.</h3>
+
+<h5>The Legacy Group, Angela</h5>
+		
+	</div>
+	
+
+
+
+
+
+
+        </div>
+        <div class="slide fj--ctr mb0--last bz-img--l">
+        
+
+            <div class='bg-img' style='background-image: url(https://s3.amazonaws.com/hoth.bizango/images/762095/jeremy-bishop-BFNkJZW9ljc-unsplash__1_.jpg)'> </div>
+          	<div class="bizango_cms bizango_cms_content bizango_content_prose textdiv_prose" id="content_222453_prose" data-bizango='{"monkey":"data", "field":"prose", "object_type":"content", "cms_id":"222453", "label":"" ,  "tag":"div"}' >	
+		<h3>We are very satisfied with the construction draw inspection reports...very prompt and thorough.</h3>
+
+<h5>Timberland Bank, Julie</h5>
+		
+	</div>
+	
+
+
+
+
+
+
+        </div>
+        <div class="slide fj--ctr mb0--last bz-img--l">
+        
+
+            <div class='bg-img' style='background-image: url(https://s3.amazonaws.com/hoth.bizango/images/762102/ricardo-gomez-angel-TbwnUGV4kok-unsplash.jpg)'> </div>
+          	<div class="bizango_cms bizango_cms_content bizango_content_prose textdiv_prose" id="content_222454_prose" data-bizango='{"monkey":"data", "field":"prose", "object_type":"content", "cms_id":"222454", "label":"" ,  "tag":"div"}' >	
+		<h3>...by far the best draw inspection company we&#39;ve ever had. Just wanted to give you a big thank you!!!</h3>
+
+<h5>Bismark Mortgage, Capitola</h5>
+		
+	</div>
+	
+
+
+
+
+
+
+        </div>
+    </div>
+
+
+
+ <script defer="defer" src="/trynorthwest/javascripts/blocks/slick.min.js?1789483190" type="text/javascript"></script>
+  <script>
+    $(document).ready(function(){
+      $('.block_id-221148 .slider').slick({
+        arrows: true, dots: true
+      });
+    });
+    /*
+      Additional options can be set on this slider from anywhere:
+      
+        $('.block_id-221148 .slider').slick('slickSetOption', {autoplay: true, autoplaySpeed: 5000}, true);
+
+      See https://github.com/kenwheeler/slick for all options
+    */
+  </script>
+          </div>
+
+      </div>
+
+    </div>  
+  </div>
+</div>
+	
+	</div>
+
+
+	<div class="block_container " data-content-id="221160"> 
+  <div class="block__bg-img block_container__bg-img" style="display:none;"></div>
+	
+	
+
+    
+<div id="221160" class="block block_id-221160 block_type__cta bg-angle__angle special-arrow__no">
+  
+  <div class="block__bg-img"></div>
+	<div class="page_frame group">
+
+    <div class="all-cols-wrap">
+
+      <div id="cta" class="cta-bottom-section flex">
+        <div class="col-1">
+          	<div class="bizango_cms bizango_cms_content bizango_content_prose textdiv_prose" id="content_221160_prose" data-bizango='{"monkey":"data", "field":"prose", "object_type":"content", "cms_id":"221160", "label":"" ,  "tag":"div"}' >	
+		<h2>Let us <span style="color:#92d050;">prove it</span></h2>
+
+<p>Nationwide draw inspection turnaround in two business days. Contact us now today to schedule a demo and learn more about how we can work for you.</p>
+		
+	</div>
+	
+
+
+
+
+
+
+        </div>
+        <div class="col-2">
+          <div class="cta-form-wrapper">
+            
+
+<form id="bizango_superform" class="superform" action="/trynorthwest/superform.php" method="post">
+      <div class="form-field form-field__input-text first-name">
+        <label for="form-field__0">First Name</label>
+        <input id="form-field__0" type="text" placeholder="First Name" value="" name="First Name" class="superform_field first-name ">
+      </div>
+      <div class="form-field form-field__input-text last-name">
+        <label for="form-field__1">Last Name</label>
+        <input id="form-field__1" type="text" placeholder="Last Name" value="" name="Last Name" class="superform_field last-name ">
+      </div>
+      <div class="form-field form-field__input-text company-name">
+        <label for="form-field__2">Company Name</label>
+        <input id="form-field__2" type="text" placeholder="Company Name" value="" name="Company Name" class="superform_field company-name ">
+      </div>
+      <div class="form-field form-field__input-select">
+        <label for="form-field__3">Select Service of Interest</label>
+        <select id="form-field__3" name="Select Service of Interest" class="superform_field select-service-of-interest ">
+          <option value="pick me" default="true" selected="true" disabled="disabled">Select Service of Interest</option>
+          <option value="Residential Progress Inspections">Residential Progress Inspections</option>
+          <option value="Commercial Progress Inspections">Commercial Progress Inspections</option>
+          <option value="Feasibility Reviews">Feasibility Reviews</option>
+          <option value="Other Support Services">Other Support Services</option>
+        </select>
+      </div>
+      <div class="form-field form-field__input-tel phone">
+        <label for="form-field__4">Phone</label>
+        <input id="form-field__4" type="tel" placeholder="Phone" value="" name="Phone" class="superform_field phone required">
+      </div>
+      <div class="form-field form-field__input-email email">
+        <label for="form-field__5">Email</label>
+        <input id="form-field__5" type="email" placeholder="Email" value="" name="Email" class="superform_field email required email">
+      </div>
+  <div class="flex" style="position: relative;">
+    
+    <div class="form-field form-field__submit">
+      <input type="hidden" name="superform" value="258">
+      <button type="submit" id="superform_submit">Get Started Today</button>
+
+    </div>
+  </div>
+</form>
+	<script src="/trynorthwest/javascripts/jquery.form.min.js?1789483190" type="text/javascript"></script>
+	<script src="/trynorthwest/javascripts/jquery.validate.1.11.1.min.js?1789483190" type="text/javascript"></script>
+
+
+<script>
+
+
+
+$(document).ready(function() {
+
+  jQuery.validator.addMethod("defaultInvalid", function(value, element){
+    return !(element.value == element.defaultValue);
+  });
+
+  $("#bizango_superform").validate({
+    showErrors: function(){
+      $(window).trigger('resize.px.parallax');        
+      this.defaultShowErrors();
+    },
+    submitHandler: function(form) {
+      jQuery(form).ajaxSubmit({
+        target: "#bizango_superform",
+        replaceTarget: true,
+        success: function(){
+          $(window).trigger('resize.px.parallax');        
+        },
+        error: function (xhr, ajaxOptions, thrownError) {
+          alert(xhr.responseText);
+          $("#superform_spamhash").addClass("error");
+          $("#superform_submit").val("Submit");
+          $(window).trigger('resize.px.parallax');
+        }
+      });
+    }
+  });
+
+  jQuery.validator.addMethod("phoneUS", function(phone_number, element) {
+    phone_number = phone_number.replace(/\s+/g, ""); 
+    return this.optional(element) || phone_number.length > 9 &&      phone_number.match(/^(1-?)?(\([2-9]\d{2}\)|[2-9]\d{2})-?[2-9]\d{2}-?\d{4}$/);
+  }, "Please specify a valid phone number");
+
+  jQuery.extend(jQuery.validator.messages, {
+    required: "Please include this information.",
+    email: "Please include a valid email address.",
+    digits: "Please enter only digits.",
+    equalTo: "Please enter the same value again.",
+    defaultInvalid: "Please include this information."
+  });
+
+});
+
+</script>
+
+
+            <div class="bizango_cms bizango_cms_content bizango_content_data1 textdiv_data1" id="content_221186_data1" data-bizango='{"monkey":"data", "field":"data1", "object_type":"content", "cms_id":"221186", "label":"", "tag":"div"}' >Turnaround in 2 business days, nationwide!</div >
+	
+
+
+
+
+
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+    <a class="bouncy-arrow" href="#cta"></a>
+</div>
+
+
+<script>
+  $(document).ready(function(){
+    $('#221160 #superform_submit').click(function(){
+      $(document).ajaxComplete(function(event,xhr,options){
+        if (options['url'] == '/trynorthwest/superform') {
+          console.log('Form Submitted');
+              // ga('send','event', 'contact form submission', 'click-to-call', ctc);
+        }
+      })
+    })
+  })
+</script>
+	
+	</div>
+
+
+</div>
+
+
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDD6TIIJHD9Fh_2PJQzWUUuYRLBwgU4yMc&libraries=places&callback=initAutocomplete"></script>
+<script>
+    function initAutocomplete(){
+        var options = {
+            types: ['(regions)'],
+            componentRestrictions: {
+                country: 'us'
+            },
+        };
+        var input = $('[data-intercept-form] [name="zip"]').get(0);
+        if (!input || typeof google === 'undefined' || !google.maps || !google.maps.places) {
+            return;
+        }
+        new google.maps.places.Autocomplete(input, options);
+    }
+</script>
+<script>
+    $(document).ready(function(){
+        if ($(document).scrollTop() > 600) {
+            console.log($(document).scrollTop());
+            $('#nav_frame').css('background-color', 'rgba(15,41,41,1)');
+        }
+        $(window).on('scroll', function(e){
+            if ($(document).scrollTop() > 650) {
+                return
+            }
+            else{
+            scrollPos = $(document).scrollTop();
+            opVal = scrollPos < 600 ? (scrollPos / 600).toFixed(2) : 1;
+            $('#nav_frame').css('background-color', 'rgba(15,41,41,' + opVal + ')');
+            }
+        })
+        $('[data-intercept-form]').on('submit', function(){
+            var redirect = $(this).attr('action');
+            var zip = $(this).find('[name="zip"]').val();
+            var project = $(this).find('[name="project"]').val() || '';
+            sessionStorage.setItem('ncc.lenderZip', zip);
+            sessionStorage.setItem('ncc.lenderProject', project);
+            var qs = '?zip=' + encodeURIComponent(zip);
+            if (project) qs += '&project=' + encodeURIComponent(project);
+            document.location.href = document.location.protocol + "//" + document.location.host + redirect + qs;
+            return false;
+        });
+    })
+</script>
+	
+	 
+
+
+<div id="footer">
+	<div class="page_frame">
+<div id="footer_nav">
+			<a href="/trynorthwest/" class="logo"></a>
+			<div class="footer-nav_container">
+				<div class="top-footer-nav">
+					<div id="nav_contact" class="nav-contact_container">
+						<ul class="nav nav--contact">
+							<li class="social-group">
+								<ul class="">
+									<li class="social">
+										<a class="icons icons--facebook" href="https://www.facebook.com/northwestconstructioncontrol/" target="_blank" rel="noopener"></a>
+									</li>
+									<li class="social">
+										<a class="icons icons--twitter" href="
+https://twitter.com/NorthWestConst3" target="_blank" rel="noopener"></a>
+									</li>
+									<li class="social social--last">
+										<a class="icons icons--linkedin" href="https://linkedin.com/company/
+northwest-construction-control" target="_blank" rel="noopener"></a>
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<p class="icons icons--phone">
+									<a href='tel:(800) 698-3986'><span>(800) 698-3986</span></a>
+								</p>
+							</li>
+
+
+
+						</ul>
+					</div>
+					<ul class="nav nav--utils">
+								<li><a class="button" id="" href="#cta" >Contact Us</a></li>
+								<li><a class="button" id="" href="/trynorthwest/login.php" >User Login</a></li>
+					</ul>
+				</div>
+				<div class="nav-primary_container">
+					<ul class="nav nav--primary">
+							<li class=""><a class="" id="nav_services" href="/trynorthwest/services" >Services</a>
+							<div class="mega-menu-content">
+								<p><a href="/trynorthwest/services-project-monitoring" title="Trusted progress monitoring">Draw Inspections</a></p>
+
+<p><a href="/trynorthwest/services-risk-reviews" title="Mitigation project risk">Pre-Close&nbsp;Reviews</a></p>
+
+<p><a href="/trynorthwest/services-specialized-support" title="Convenient field services">Specialized&nbsp;Services</a></p>
+
+								<p><a href="/trynorthwest/services-residential" title="Solutions for residential construction loans">Residential</a></p>
+
+<p><a href="/trynorthwest/services-commercial" title="Solutions for commercial construction loans">Commercial</a></p>
+
+							</div>
+							</li>
+							<li class=""><a class="" id="nav_solutions" href="/trynorthwest/solutions" >Solutions</a>
+							<div class="mega-menu-content">
+								<p><a href="/trynorthwest/solutions-web-application" title="Manage projects with ease">Software</a></p>
+
+<p><a href="/trynorthwest/solutions-api-integration" title="Flexible integration options">API</a></p>
+
+								<p><a href="/trynorthwest/soutions-banks" title="Mitigate project risk">Banks</a></p>
+
+<p><a href="/trynorthwest/solutions-credit-unions" title="Deliver exceptional service">Credit Unions</a></p>
+
+<p><a href="/trynorthwest/solutions-private-lenders" title="Streamlined field services">Private Lenders</a></p>
+
+							</div>
+							</li>
+							<li class=""><a class="" id="nav_about" href="/trynorthwest/about" >About</a>
+							<div class="mega-menu-content">
+								<p><a href="/trynorthwest/about" title="Trusted since 1985">About Us</a></p>
+
+<p><a href="/trynorthwest/careers" title="Join our growing team">Careers&nbsp;</a></p>
+								<p><a href="/trynorthwest/inspectors" title="Expand your business">Join Our Network</a></p>
+
+							</div>
+							</li>
+							<li class=""><a class="" id="nav_resources" href="/trynorthwest/resources-news" >Resources</a>
+							<div class="mega-menu-content">
+								<p><a href="/trynorthwest/resources-news" title="Resources, news, and more">Our Blog</a></p>
+
+
+
+
+
+								<p><a href="/trynorthwest/vendor-compliance" title="Security and best practices">Vendor Diligence</a></p>
+
+<p><a href="/trynorthwest/privacy-policy">Web Privacy Policy</a></p>
+
+							</div>
+							</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="copyright-container">
+	<span class="copyright"> &copy; 2026 Northwest Construction Control &nbsp;</span>
+	<a id="bizango" href="https://www.bizango.com"  title="Seattle Website Design" target=_NEW>Seattle Website Design</a>
+</div>
+
+<script defer="defer" src="/trynorthwest/javascripts/ncc/lax.min.js?1789483190" type="text/javascript"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+   	$("#nav_home").parent().addClass("current");
+
+	$('#mobile_nav .nav').hide();
+	// $('#mobile_nav .hamburger').on('click', function() {
+	// 	$(this).siblings('.nav').slideToggle();
+	// })
+
+	// $('#mobile_nav .nav a.has-subnav').on('click', function(e) {
+	// 	e.preventDefault();
+	// 	$(this).siblings('.subnav').slideToggle();
+	// })
+	$('#mobile_nav li.mega-menu > a').click(function(e){
+		console.log(e);
+		e.preventDefault();
+		// if (e.target.nodeNam != "A") {
+		// 	// e.target.click();
+		// }
+	})
+	$('#mobile_nav .nav li .plus').on('click', function(e) {
+		e.preventDefault();
+		var plusExpanded = $(this).attr('aria-expanded') == 'false' ? 'true' : 'false';
+		$(this).parent().attr('aria-expanded', plusExpanded);
+		$(this).parents('li').toggleClass('active');
+		$(this).parent().siblings('.sub-menu').slideToggle();
+	})
+
+	$("[data-toggle-show]").on("click", function(){
+		var toggleState = $(this).attr('aria-expanded');
+		var newToggleState = toggleState == 'false' ? 'true' : 'false';
+		$(this).attr('aria-expanded', newToggleState).toggleClass('is-active');
+		$('#mobile_nav .nav').slideToggle();
+	});
+
+	$("#buy_button").click(function() {
+		$( ".buy_button_hidden" ).slideToggle("fast");
+		$("#buy_button").toggleClass(".buy_button_open");
+		return false;
+	});
+	$('a[href="#cta"]').click(function(e){
+		e.preventDefault();
+		if ($('#cta.cta-bottom-section .col-2').offset()) {
+			$('html,body').animate({
+			scrollTop: $('#cta.cta-bottom-section .col-2').offset().top - 50 + 'px'
+			}, 1200);
+		}
+  })
+    setTimeout(function(){
+        setInterval(function(){
+            $('.bouncy-arrow').toggleClass('animate')
+        },4000);
+    }, 2000);
+
+	lax.init();
+	lax.addDriver('scrollY', function() {
+		return window.scrollY;
+	}, {inertiaEnabled: true});
+	lax.addElements('.lax', {
+		scrollY: {
+			translateY: [
+				[0],
+				[-200],
+				{
+				inertia: -10,
+				easing: 'easeInOutCubic'
+				}
+          ],
+		}
+	})
+
+	$('#footer_nav .mega-menu-content').parent().addClass('li-mega-menu')
+});
+
+	var browser = (function (agent) {
+        switch (true) {
+            case agent.indexOf("edge") > -1: return "edge";
+            case agent.indexOf("edg") > -1: return "chromium based edge (dev or canary)";
+        }
+    })(window.navigator.userAgent.toLowerCase());
+	if (browser == "chromium based edge (dev or canary)") {
+		$('body').addClass('chromium-edge')
+	}
+	
+</script>
+
+<script>
+  jQuery(function() {
+    jQuery('a[href^="mailto:"]').click(function(){
+      var mailto=jQuery(this).attr('href');
+      ga('send','event', 'contact', 'mailto', mailto);
+    });
+    jQuery('a[href^="tel:"]').click(function(){
+      var ctc=jQuery(this).attr('href');
+      ga('send','event', 'contact', 'click-to-call', ctc);
+    });
+  });
+</script>
+
+
+
+
+
+</body>
+</html>

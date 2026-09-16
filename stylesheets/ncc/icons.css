@@ -1,0 +1,73 @@
+@font-face {
+  font-family: "bizango-icons";
+  src: url("./font/bizango-icons2.eot");
+  src: url("./font/bizango-icons2.eot") format("embedded-opentype"), url("./font/bizango-icons2.ttf") format("truetype"),
+    url("./font/bizango-icons2.woff") format("woff"), url("./font/bizango-icons2.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+.cke_dialog_ui_vbox[name="bizangoChars"] a.cke_dialog_ui_button,
+.cke_dialog_ui_vbox[name="bizangoChars"] a.cke_dialog_ui_button span,
+.cke_dialog_ui_vbox[name="bizangoChars"] label {
+  font-family: normal normal normal 12px Arial, Helvetica, Tahoma, Verdana, Sans-Serif;
+  font-family: "bizango-icons";
+}
+.cke_dialog_ui_vbox[name="bizangoChars"] tbody > tr.cke_dialog_ui_hbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: scroll;
+  padding: 1px;
+  max-height: 300px;
+  max-width: 80vw;
+}
+.cke_dialog_ui_vbox[name="bizangoChars"] .cke_dialog_ui_hbox td {
+  background-color: rgb(209, 209, 209);
+  border: 1px solid black;
+  box-sizing: border-box;
+  display: inline-block;
+  margin-bottom: -1px;
+  padding: 0;
+  position: relative;
+  top: -1px;
+  width: 47px !important;
+}
+.cke_dialog_ui_vbox[name="bizangoChars"] input {
+  height: 100%;
+  left: -1px;
+  opacity: 0;
+  position: absolute;
+  top: -1px;
+  width: 100%;
+}
+.cke_dialog_ui_vbox[name="bizangoChars"] label {
+  font-size: 32px;
+  text-align: center;
+}
+.cke_dialog_ui_vbox[name="bizangoChars"] .cke_dialog_ui_hbox td label {
+  box-sizing: border-box;
+  display: inline-block;
+  height: 100%;
+  padding: 2px 5px 2px 3px;
+  width: 100%;
+}
+.cke_dialog_ui_vbox[name="bizangoChars"] input:checked + label,
+.cke_dialog_ui_vbox[name="bizangoChars"] input:focus + label {
+  background-color: rgb(170, 170, 170);
+}
+.cke_dialog_ui_vbox[name="bizangoChars"] .cke_dialog_ui_hbox td:nth-child(n + 2) {
+  border-left: none;
+}
+.bizango-icon {
+  content: " ";
+  font-family: "bizango-icons";
+}
+/* .bizango-icon::before {
+  content: attr(data-content);
+  color: inherit;
+  font-family: "bizango-icons";
+  font-size: inherit;
+  line-height: inherit;
+  position: relative;
+} */

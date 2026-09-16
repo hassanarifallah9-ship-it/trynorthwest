@@ -1,0 +1,222 @@
+-- NorthWest Construction Control - full system schema
+CREATE DATABASE IF NOT EXISTS `nwcc` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE `nwcc`;
+
+CREATE TABLE IF NOT EXISTS companies (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(180) NOT NULL,
+  type ENUM('bank','credit_union','private_lender','other') NOT NULL DEFAULT 'bank',
+  phone VARCHAR(40) DEFAULT NULL,
+  email VARCHAR(180) DEFAULT NULL,
+  address VARCHAR(255) DEFAULT NULL,
+  city VARCHAR(100) DEFAULT NULL,
+  state VARCHAR(40) DEFAULT NULL,
+  zip VARCHAR(20) DEFAULT NULL,
+  status ENUM('active','inactive') NOT NULL DEFAULT 'active',
+  created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS users (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  company_id INT UNSIGNED DEFAULT NULL,
+  role ENUM('admin','staff','lender','inspector') NOT NULL DEFAULT 'lender',
+  first_name VARCHAR(80) NOT NULL,
+  last_name VARCHAR(80) NOT NULL,
+  email VARCHAR(180) NOT NULL UNIQUE,
+  phone VARCHAR(40) DEFAULT NULL,
+  password_hash VARCHAR(255) NOT NULL,
+  status ENUM('active','pending','inactive') NOT NULL DEFAULT 'active',
+  last_login DATETIME DEFAULT NULL,
+  created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  CONSTRAINT fk_users_company FOREIGN KEY (company_id) REFERENCES companies(id) ON DELETE SET NULL
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS inspector_profiles (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  user_id INT UNSIGNED NOT NULL UNIQUE,
+  certifications TEXT,
+  experience_years INT DEFAULT 0,
+  coverage_notes VARCHAR(255) DEFAULT NULL,
+  status ENUM('pending','approved','inactive') NOT NULL DEFAULT 'pending',
+  created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  CONSTRAINT fk_insp_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS coverage_zips (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  zip VARCHAR(15) NOT NULL,
+  city VARCHAR(100) NOT NULL,
+  state VARCHAR(40) NOT NULL,
+  status ENUM('covered','nearby','none') NOT NULL DEFAULT 'covered',
+  inspector_user_id INT UNSIGNED DEFAULT NULL,
+  UNIQUE KEY uq_zip (zip),
+  CONSTRAINT fk_cov_insp FOREIGN KEY (inspector_user_id) REFERENCES users(id) ON DELETE SET NULL
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS leads (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  first_name VARCHAR(80) NOT NULL,
+  last_name VARCHAR(80) NOT NULL,
+  company VARCHAR(180) DEFAULT NULL,
+  service VARCHAR(120) DEFAULT NULL,
+  phone VARCHAR(40) DEFAULT NULL,
+  email VARCHAR(180) NOT NULL,
+  message TEXT,
+  source VARCHAR(60) DEFAULT 'website',
+  status ENUM('new','contacted','qualified','converted','closed') NOT NULL DEFAULT 'new',
+  assigned_to INT UNSIGNED DEFAULT NULL,
+  created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  CONSTRAINT fk_leads_user FOREIGN KEY (assigned_to) REFERENCES users(id) ON DELETE SET NULL
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS applications (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  type ENUM('inspector','career') NOT NULL,
+  name VARCHAR(160) NOT NULL,
+  email VARCHAR(180) NOT NULL,
+  phone VARCHAR(40) DEFAULT NULL,
+  message TEXT,
+  status ENUM('new','reviewing','accepted','rejected') NOT NULL DEFAULT 'new',
+  created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS projects (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  company_id INT UNSIGNED NOT NULL,
+  lender_user_id INT UNSIGNED DEFAULT NULL,
+  name VARCHAR(180) NOT NULL,
+  address VARCHAR(255) NOT NULL,
+  city VARCHAR(100) NOT NULL,
+  state VARCHAR(40) NOT NULL,
+  zip VARCHAR(20) NOT NULL,
+  project_type ENUM('residential','commercial','land development') NOT NULL DEFAULT 'residential',
+  budget DECIMAL(14,2) DEFAULT NULL,
+  contractor_name VARCHAR(180) DEFAULT NULL,
+  status ENUM('active','on_hold','completed','cancelled') NOT NULL DEFAULT 'active',
+  notes TEXT,
+  created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  CONSTRAINT fk_proj_co FOREIGN KEY (company_id) REFERENCES companies(id) ON DELETE CASCADE,
+  CONSTRAINT fk_proj_lender FOREIGN KEY (lender_user_id) REFERENCES users(id) ON DELETE SET NULL
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS inspections (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  project_id INT UNSIGNED NOT NULL,
+  inspector_id INT UNSIGNED DEFAULT NULL,
+  type VARCHAR(80) NOT NULL DEFAULT 'Draw Inspection',
+  draw_number INT DEFAULT 1,
+  requested_by INT UNSIGNED DEFAULT NULL,
+  scheduled_date DATE DEFAULT NULL,
+  due_date DATE DEFAULT NULL,
+  status ENUM('requested','assigned','in_progress','submitted','qc_review','released','cancelled') NOT NULL DEFAULT 'requested',
+  notes TEXT,
+  created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  CONSTRAINT fk_insp_proj FOREIGN KEY (project_id) REFERENCES projects(id) ON DELETE CASCADE,
+  CONSTRAINT fk_insp_inspector FOREIGN KEY (inspector_id) REFERENCES users(id) ON DELETE SET NULL,
+  CONSTRAINT fk_insp_req FOREIGN KEY (requested_by) REFERENCES users(id) ON DELETE SET NULL
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS reports (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  inspection_id INT UNSIGNED NOT NULL UNIQUE,
+  summary TEXT,
+  percent_complete DECIMAL(5,2) DEFAULT 0,
+  findings TEXT,
+  qc_status ENUM('pending','approved','rejected') NOT NULL DEFAULT 'pending',
+  qc_by INT UNSIGNED DEFAULT NULL,
+  qc_notes TEXT,
+  released_at DATETIME DEFAULT NULL,
+  created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  CONSTRAINT fk_rep_insp FOREIGN KEY (inspection_id) REFERENCES inspections(id) ON DELETE CASCADE,
+  CONSTRAINT fk_rep_qc FOREIGN KEY (qc_by) REFERENCES users(id) ON DELETE SET NULL
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS photos (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  inspection_id INT UNSIGNED NOT NULL,
+  file_path VARCHAR(255) NOT NULL,
+  caption VARCHAR(255) DEFAULT NULL,
+  uploaded_by INT UNSIGNED DEFAULT NULL,
+  created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  CONSTRAINT fk_photo_insp FOREIGN KEY (inspection_id) REFERENCES inspections(id) ON DELETE CASCADE
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS documents (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  project_id INT UNSIGNED NOT NULL,
+  title VARCHAR(180) NOT NULL,
+  file_path VARCHAR(255) NOT NULL,
+  uploaded_by INT UNSIGNED DEFAULT NULL,
+  created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  CONSTRAINT fk_doc_proj FOREIGN KEY (project_id) REFERENCES projects(id) ON DELETE CASCADE
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS invoices (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  company_id INT UNSIGNED NOT NULL,
+  project_id INT UNSIGNED DEFAULT NULL,
+  inspection_id INT UNSIGNED DEFAULT NULL,
+  amount DECIMAL(12,2) NOT NULL DEFAULT 0,
+  status ENUM('draft','sent','paid','overdue') NOT NULL DEFAULT 'draft',
+  due_date DATE DEFAULT NULL,
+  paid_at DATETIME DEFAULT NULL,
+  created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  CONSTRAINT fk_inv_co FOREIGN KEY (company_id) REFERENCES companies(id) ON DELETE CASCADE
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS messages (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  from_user INT UNSIGNED NOT NULL,
+  to_user INT UNSIGNED NOT NULL,
+  project_id INT UNSIGNED DEFAULT NULL,
+  body TEXT NOT NULL,
+  is_read TINYINT(1) NOT NULL DEFAULT 0,
+  created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS notifications (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  user_id INT UNSIGNED NOT NULL,
+  title VARCHAR(180) NOT NULL,
+  body VARCHAR(255) DEFAULT NULL,
+  link VARCHAR(255) DEFAULT NULL,
+  is_read TINYINT(1) NOT NULL DEFAULT 0,
+  created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  CONSTRAINT fk_note_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS blog_posts (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  title VARCHAR(220) NOT NULL,
+  slug VARCHAR(220) NOT NULL UNIQUE,
+  excerpt TEXT,
+  body TEXT,
+  status ENUM('draft','published') NOT NULL DEFAULT 'published',
+  published_at DATE DEFAULT NULL,
+  created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS contractor_reviews (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  project_id INT UNSIGNED DEFAULT NULL,
+  contractor_name VARCHAR(180) NOT NULL,
+  credit_score VARCHAR(40) DEFAULT NULL,
+  notes TEXT,
+  status ENUM('pending','complete') NOT NULL DEFAULT 'pending',
+  created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS activity_log (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  user_id INT UNSIGNED DEFAULT NULL,
+  action VARCHAR(80) NOT NULL,
+  entity VARCHAR(80) DEFAULT NULL,
+  entity_id INT UNSIGNED DEFAULT NULL,
+  meta VARCHAR(255) DEFAULT NULL,
+  created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS settings (
+  k VARCHAR(80) PRIMARY KEY,
+  v TEXT
+) ENGINE=InnoDB;

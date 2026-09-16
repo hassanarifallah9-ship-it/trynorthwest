@@ -1,0 +1,17 @@
+.DS_Store
+Thumbs.db
+*.log
+
+# Local uploads (keep folder)
+uploads/photos/*
+!uploads/photos/.gitkeep
+uploads/*
+!uploads/.htaccess
+!uploads/index.php
+!uploads/photos/
+!uploads/photos/.gitkeep
+
+# Editor / OS
+.idea/
+.vscode/
+*.swp
